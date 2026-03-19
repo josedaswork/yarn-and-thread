@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.YarnAndThread" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/brown</item>
+        <item name="colorPrimaryVariant">@color/dark_gold</item>
+        <item name="colorOnPrimary">@color/gold</item>
+        <item name="colorSecondary">@color/rust</item>
+        <item name="colorOnSecondary">@color/warm_white</item>
+        <item name="android:colorBackground">@color/cream</item>
+        <item name="colorSurface">@color/paper</item>
+        <item name="colorOnSurface">@color/ink</item>
+        <item name="android:fontFamily">@font/courier_prime</item>
+        <item name="alertDialogTheme">@style/Theme.YarnAndThread.AlertDialog</item>
+    </style>
+
+    <style name="Theme.YarnAndThread.AlertDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorSurface">@color/cream</item>
+        <item name="colorPrimary">@color/rust</item>
+        <item name="android:colorBackground">@color/cream</item>
+    </style>
+
+    <style name="ThemeOverlay.YarnAndThread.AppBar" parent="ThemeOverlay.Material3.Dark.ActionBar">
+        <item name="colorControlNormal">@color/gold</item>
+        <item name="actionMenuTextColor">@color/gold</item>
+    </style>
+
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Yarn &amp; Thread</string>
+    <string name="new_project">+ New Project</string>
+    <string name="begin_your_project">Begin your project</string>
+    <string name="empty_description">Create a new knitting project, give it a name, and load your PDF pattern to start reading, highlighting, and counting rows.</string>
+    <string name="delete_project">Delete Project</string>
+    <string name="delete_confirm">Delete \"%s\"? This cannot be undone.</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="select_pdf">Select PDF</string>
+    <string name="enter_name">Please enter a project name</string>
+    <string name="project_name_hint_label">PROJECT NAME</string>
+    <string name="project_name_hint">e.g. Cosy Winter Cardigan</string>
+    <string name="pdf_selected_later">You\'ll choose the PDF file next.</string>
+    <string name="add_counter">Add Counter</string>
+    <string name="add">Add</string>
+    <string name="counter_name_label">COUNTER NAME</string>
+    <string name="counter_name_hint">e.g. Row, Repeat, Stitch</string>
+    <string name="counter_max_label">MAXIMUM (optional — resets to 0 when reached)</string>
+    <string name="counter_max_hint">e.g. 10, 24, 40 — leave blank for none</string>
+    <string name="rename_counter">Rename Counter</string>
+    <string name="ok">OK</string>
+    <string name="set_maximum">Set Maximum</string>
+    <string name="blank_to_remove">Leave blank to remove</string>
+    <string name="link_counter">Link Counter</string>
+    <string name="remove_link">Remove Link</string>
+    <string name="set_max_first">Set a maximum first to enable linking</string>
+    <string name="add_more_counters">Add more counters to link them</string>
+    <string name="no_pdf_loaded">No PDF loaded</string>
+    <string name="no_pdf_description">The PDF for this project wasn\'t found. Please reload it.</string>
+    <string name="load_pdf">Load PDF ✧</string>
+</resources>

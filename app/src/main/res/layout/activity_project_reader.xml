@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cream">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/brown"
+        app:titleTextColor="@color/gold"/>
+
+    <!-- Counters bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/brown"
+        android:paddingStart="12dp"
+        android:paddingEnd="8dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COUNTERS"
+            android:textColor="@color/gold"
+            android:textSize="10sp"
+            android:letterSpacing="0.15"
+            android:layout_marginEnd="8dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCounters"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"/>
+
+        <Button
+            android:id="@+id/btnAddCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="+ Counter"
+            android:textSize="10sp"
+            android:textColor="@color/gold"
+            android:backgroundTint="@android:color/transparent"
+            style="@style/Widget.Material3.Button.OutlinedButton"/>
+
+    </LinearLayout>
+
+    <!-- Annotation toolbar -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/paper"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:divider="@drawable/divider_vertical"
+            android:showDividers="middle">
+
+            <!-- Tool buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp">
+
+                <Button
+                    android:id="@+id/btnHighlight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="✏ Highlight"
+                    android:textSize="11sp"
+                    android:textColor="@color/brown"
+                    android:backgroundTint="@color/warm_white"
+                    android:layout_marginEnd="4dp"
+                    style="@style/Widget.Material3.Button.TonalButton"/>
+
+                <Button
+                    android:id="@+id/btnNote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="📌 Note"
+                    android:textSize="11sp"
+                    android:textColor="@color/brown"
+                    android:backgroundTint="@color/warm_white"
+                    android:layout_marginEnd="4dp"
+                    style="@style/Widget.Material3.Button.TonalButton"/>
+
+                <Button
+                    android:id="@+id/btnEraser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="✂ Erase"
+                    android:textSize="11sp"
+                    android:textColor="@color/brown"
+                    android:backgroundTint="@color/warm_white"
+                    style="@style/Widget.Material3.Button.TonalButton"/>
+
+            </LinearLayout>
+
+            <!-- Color swatches -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp">
+
+                <View
+                    android:id="@+id/colorYellow"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/color_swatch_yellow"
+                    android:layout_marginEnd="6dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <View
+                    android:id="@+id/colorPink"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/color_swatch_pink"
+                    android:layout_marginEnd="6dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <View
+                    android:id="@+id/colorGreen"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/color_swatch_green"
+                    android:layout_marginEnd="6dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <View
+                    android:id="@+id/colorBlue"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/color_swatch_blue"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+            </LinearLayout>
+
+            <!-- Page navigation -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp">
+
+                <ImageButton
+                    android:id="@+id/btnPrevPage"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@android:drawable/ic_media_previous"
+                    android:background="@drawable/btn_tool_bg"
+                    android:contentDescription="Previous page"/>
+
+                <TextView
+                    android:id="@+id/tvPageInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="— / —"
+                    android:textColor="@color/brown"
+                    android:textSize="12sp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:minWidth="72dp"
+                    android:gravity="center"/>
+
+                <ImageButton
+                    android:id="@+id/btnNextPage"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@android:drawable/ic_media_next"
+                    android:background="@drawable/btn_tool_bg"
+                    android:contentDescription="Next page"/>
+
+            </LinearLayout>
+
+            <!-- Zoom -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp">
+
+                <ImageButton
+                    android:id="@+id/btnZoomOut"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@android:drawable/ic_menu_zoom"
+                    android:background="@drawable/btn_tool_bg"
+                    android:contentDescription="Zoom out"/>
+
+                <ImageButton
+                    android:id="@+id/btnZoomIn"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@android:drawable/ic_menu_zoom"
+                    android:background="@drawable/btn_tool_bg"
+                    android:contentDescription="Zoom in"/>
+
+            </LinearLayout>
+
+            <!-- Mode indicator -->
+            <TextView
+                android:id="@+id/tvModeIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/gold"
+                android:textSize="10sp"
+                android:letterSpacing="0.1"
+                android:background="@color/brown"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- PDF area -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:id="@+id/pdfScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#888070"
+            android:scrollbarStyle="insideOverlay">
+
+            <LinearLayout
+                android:id="@+id/pdfContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"/>
+
+        </ScrollView>
+
+        <!-- No PDF state -->
+        <LinearLayout
+            android:id="@+id/noPdfState"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="32dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📄"
+                android:textSize="48sp"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_pdf_loaded"
+                android:textSize="18sp"
+                android:textColor="@color/brown"
+                android:textStyle="italic"
+                android:fontFamily="serif"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_pdf_description"
+                android:textSize="13sp"
+                android:textColor="@color/brown"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"/>
+
+            <Button
+                android:id="@+id/btnLoadPdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/load_pdf"
+                android:backgroundTint="@color/gold"
+                android:textColor="@color/brown"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

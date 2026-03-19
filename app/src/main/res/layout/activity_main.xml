@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.YarnAndThread.AppBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/brown"
+            app:title="@string/app_name"
+            app:titleTextColor="@color/gold"
+            app:subtitleTextColor="@color/dusty_rose"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Empty state -->
+    <LinearLayout
+        android:id="@+id/emptyState"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🧶"
+            android:textSize="64sp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/begin_your_project"
+            android:textSize="22sp"
+            android:textColor="@color/brown"
+            android:fontFamily="serif"
+            android:textStyle="italic"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/empty_description"
+            android:textSize="14sp"
+            android:textColor="@color/brown"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"
+            android:maxWidth="320dp"/>
+
+        <Button
+            android:id="@+id/btnNewProjectEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_project"
+            android:backgroundTint="@color/gold"
+            android:textColor="@color/brown"/>
+
+    </LinearLayout>
+
+    <!-- Projects list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerProjects"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <!-- FAB -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabNewProject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/new_project"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:backgroundTint="@color/gold"
+        app:tint="@color/brown"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

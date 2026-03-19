@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+    android:background="@drawable/counter_chip_bg"
+    android:layout_marginEnd="8dp"
+    android:gravity="center_vertical">
+
+    <!-- Name (click to rename) -->
+    <TextView
+        android:id="@+id/tvCounterName"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:minWidth="48dp"
+        android:maxWidth="90dp"
+        android:gravity="center"
+        android:textColor="@color/brown"
+        android:textSize="11sp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"/>
+
+    <!-- Divider -->
+    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="@color/border"/>
+
+    <!-- Decrement -->
+    <ImageButton
+        android:id="@+id/btnCounterDec"
+        android:layout_width="34dp"
+        android:layout_height="match_parent"
+        android:src="@android:drawable/ic_media_rew"
+        android:background="@color/brown"
+        android:tint="@color/gold"
+        android:contentDescription="Decrease"
+        android:scaleType="fitCenter"
+        android:padding="8dp"/>
+
+    <!-- Value -->
+    <TextView
+        android:id="@+id/tvCounterValue"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:minWidth="40dp"
+        android:gravity="center"
+        android:textColor="@color/ink"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"/>
+
+    <!-- Max label (click to set max) -->
+    <TextView
+        android:id="@+id/tvCounterMax"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@color/dark_gold"
+        android:textSize="12sp"
+        android:paddingEnd="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:visibility="gone"/>
+
+    <!-- Increment -->
+    <ImageButton
+        android:id="@+id/btnCounterInc"
+        android:layout_width="34dp"
+        android:layout_height="match_parent"
+        android:src="@android:drawable/ic_media_ff"
+        android:background="@color/brown"
+        android:tint="@color/gold"
+        android:contentDescription="Increase"
+        android:scaleType="fitCenter"
+        android:padding="8dp"/>
+
+    <!-- Divider -->
+    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="@color/border"/>
+
+    <!-- Link button -->
+    <ImageButton
+        android:id="@+id/btnCounterLink"
+        android:layout_width="32dp"
+        android:layout_height="match_parent"
+        android:src="@android:drawable/ic_menu_share"
+        android:background="@android:color/transparent"
+        android:tint="@color/sage"
+        android:contentDescription="Link counter"
+        android:padding="6dp"/>
+
+    <!-- Divider -->
+    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="@color/border"/>
+
+    <!-- Remove button -->
+    <ImageButton
+        android:id="@+id/btnCounterRemove"
+        android:layout_width="28dp"
+        android:layout_height="match_parent"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:background="@android:color/transparent"
+        android:tint="@color/rust"
+        android:contentDescription="Remove counter"
+        android:alpha="0.6"
+        android:padding="5dp"/>
+
+</LinearLayout>
